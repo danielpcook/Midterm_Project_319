@@ -1,1 +1,25 @@
-"tasks"
+{
+    "categories": [
+        {
+            "title": "Lifestyle:",
+            "description": "These tasks are for health, fitness, and other lifestyle goals",
+            "url": "https://openclipart.org/image/800px/254287"
+        },
+        {
+            "title": "Work:",
+            "description": "These tasks are for work-related issues and goals",
+            "url": "https://openclipart.org/image/800px/325188"
+        },
+        {
+            "title": "School:",
+            "description": "These tasks are for school-related work, homework, and school projects",
+            "url": "https://openclipart.org/image/800px/191354"
+        },
+        {
+            "title": "Other/Miscellaneous:",
+            "description": "Tasks that don't fit into any other category",
+            "url": "https://openclipart.org/image/800px/79363"
+        }
+        
+    ]
+}
