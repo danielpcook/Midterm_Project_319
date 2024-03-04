@@ -1,3 +1,27 @@
+fetch("./data.JSON")
+.then(response => response.json())
+.then(data => {
+    // Access the array of students from the JSON data
+    const categories = data.categories;
+
+    // Get the ul element by id
+    //const imageListElement = document.getElementById('studentList');
+
+    // Loop through the students and create list items
+    let i = 0;
+    categories.forEach(image => {
+      i = i + 1;
+      const imageListElement = document.getElementById('tasklist' + i);
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <img src=${image.url} alt="${image.title} Image" width="100">
+        <p>"${image.title}" ${image.description}</p>
+        `;
+      imageListElement.appendChild(li);
+    });
+  })
+
+
 function addItem(){
     var name = document.getElementById("task-name").value;
     var date = document.getElementById("task-date").value;
@@ -50,4 +74,5 @@ function getCategory() {
 
     
 }
+
 
