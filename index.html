@@ -40,13 +40,25 @@
         list-style-type: none;
       }
 
+      body{
+        background-color: dodgerblue;
+      }
+
+      .nav-link{
+        color: black;
+      }
+
+      .main_list{
+        list-style-type: none;
+      }
+
 
     </style>
 
     <title>Todo List</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id = "navbar-main">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +67,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./examples.html"><strong>View Examples</strong></a>
@@ -83,7 +95,6 @@
       <ul id = "tasklist4" class ="main_list"></ul>
 
       <div id = "prompt">
-        <p id = "task-prompt">Enter New Task Here:</p>
         <p></p>
         <button id = "add-task" onclick="revealAddbox()">Add New Task</button>
         <div id = "detailPrompt">
@@ -91,7 +102,7 @@
           <p></p>
           <input class="input-bar" type="text" placeholder="Type task name here..." id = "task-name" onfocus = "this.value=''">
           <p></p>
-          <input class="input-bar" type="text" placeholder="Type due date here..." id = "task-date" onfocus = "this.value=''">
+          <input class="input-bar" type="text" placeholder="mm/dd/yyyy" id = "task-date" onfocus = "this.value=''">
           <p></p>
           <div id = cat>
           <ul class="choices">
@@ -100,28 +111,28 @@
                 <ul class="choices">
                     <li>
                         <label
-                            ><input type="radio" name="question0" value="A" /><span
+                            ><input type="radio" name="question0" value="tasklist1" /><span
                                 >Work</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
-                            ><input type="radio" name="question0" value="B" /><span
+                            ><input type="radio" name="question0" value="tasklist2" /><span
                                 >School</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
-                            ><input type="radio" name="question0" value="C" /><span
+                            ><input type="radio" name="question0" value="tasklist3" /><span
                                 >Lifestyle</span
                             ></label
                         >
                     </li>
                     <li>
                         <label
-                            ><input type="radio" name="question0" value="D" /><span
+                            ><input type="radio" name="question0" value="tasklist4" /><span
                                 >Other/Miscellaneous</span
                             ></label
                         >
