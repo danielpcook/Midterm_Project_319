@@ -52,6 +52,19 @@
         list-style-type: none;
       }
 
+      #todolist{
+        
+        margin: 70px;
+        border-style: none solid none;
+        border-color: darkgray;
+      }
+
+      .container{
+        background-color: whitesmoke;
+        border-style: solid;
+        border-color: black;
+      }
+
 
     </style>
 
@@ -82,17 +95,21 @@
       </nav>
 
       <div id = heading>
-        <h2 class = "main_list">Welcome</h2>
+        <h2 class = "main_list">Welcome<hr></h2>
+        <p class = "main_list"><strong>Create a to-do list to plan your tasks</strong></p>
       </div>
-      <p><br></p>
 
-      <h3 class = "main_list">Current List of Tasks</h3>
-      <ul id = "main-task-list"></ul>
+      <div id = todolist>
+        <div>
+          <h3 class = "main_list"><u>Current List of Tasks</u></h3>
+        </div>
 
       <ul id = "tasklist1" class ="main_list"></ul>
       <ul id = "tasklist2" class ="main_list"></ul>
       <ul id = "tasklist3" class ="main_list"></ul>
       <ul id = "tasklist4" class ="main_list"></ul>
+
+    </div>
 
       <div id = "prompt">
         <p></p>
