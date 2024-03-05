@@ -1,7 +1,7 @@
 fetch("./data.JSON")
 .then(response => response.json())
 .then(data => {
-    // Access the array of students from the JSON data
+    
     const categories = data.categories;
 
     // Get the ul element by id
@@ -15,7 +15,7 @@ fetch("./data.JSON")
       const li = document.createElement('li');
       li.innerHTML = `
         <img src=${image.url} alt="${image.title} Image" width="100">
-        <p>"${image.title}" ${image.description}</p>
+        <p><strong>${image.title} ${image.description}</strong></p>
         `;
       imageListElement.appendChild(li);
     });
@@ -25,12 +25,12 @@ fetch("./data.JSON")
 function addItem(){
     var name = document.getElementById("task-name").value;
     var date = document.getElementById("task-date").value;
-    var rates = document.getElementById('cat').value;
+    var assignment = getChoice();
 
     var newItem = document.createElement("li");
-    newItem.appendChild(document.createTextNode(name));
+    newItem.appendChild(document.createTextNode(name + " - do by: " + date));
 
-    document.getElementById("main-task-list").appendChild(newItem);
+    document.getElementById(assignment).appendChild(newItem);
 
     outputList.appendChild(listItem);
     document.getElementById("task-name").value = "";
@@ -53,26 +53,14 @@ function revealAddbox(){
       }
 }
 
-function getCheckedValue(name) {
-    var cat = document.getElementsByName(name);
-    for (var y = 0; y < cat.length; y++)
-        if (cat[y].checked) return cat[y].value;
-}
-function getCategory() {
-    if(getCheckedValue(question0) === 'A'){
-        return "Work";
-    }
-    if(getCheckedValue(question0) === 'B'){
-        return "School";
-    }
-    if(getCheckedValue(question0) === 'C'){
-        return "Lifestyle";
-    }
-    if(getCheckedValue(question0) === 'D'){
-        return "Other/Miscellaneous";
-    }
+function getChoice(){
+    var choices = document.getElementsByName("question0");
 
-    
+    for (var i = 0; i < choices.length; i++) {
+        if (choices[i].checked) {
+          return choices[i].value;
+        }
+      }
 }
 
 
