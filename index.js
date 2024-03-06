@@ -4,18 +4,15 @@ fetch("./data.JSON")
     
     const categories = data.categories;
 
-    // Get the ul element by id
-    //const imageListElement = document.getElementById('studentList');
-
-    // Loop through the students and create list items
     let i = 0;
     categories.forEach(image => {
       i = i + 1;
       const imageListElement = document.getElementById('tasklist' + i);
       const li = document.createElement('li');
       li.innerHTML = `
+      <p></p>
         <img src=${image.url} alt="${image.title} Image" width="100">
-        <p><strong>${image.title} ${image.description}</strong></p>
+        <p><strong>${image.title}</strong> ${image.description}<hr></p>
         `;
       imageListElement.appendChild(li);
     });
@@ -28,7 +25,7 @@ function addItem(){
     var assignment = getChoice();
 
     var newItem = document.createElement("li");
-    newItem.appendChild(document.createTextNode(name + " - do by: " + date));
+    newItem.appendChild(document.createTextNode("-" + name + ", do by: " + date));
 
     document.getElementById(assignment).appendChild(newItem);
 
@@ -62,5 +59,7 @@ function getChoice(){
         }
       }
 }
+
+
 
 
