@@ -22,4 +22,21 @@
         }
         
     ]
+    "examples": [
+        {
+            "title": "Example 1",
+            "description": "This is an example of what a list might look like for someone who works a full time job during the week",
+            "url":"./images/listexample1.png"
+        },
+        {
+            "title": "Example 2",
+            "description": "This list shows a more well-rounded list for someone who works and attends school",
+            "url": "./images/listexample2.png"
+        },
+        {
+            "title": "Example 3",
+            "description": "This is a real world example of a todo list from one of the authors of this page",
+            "url": "./images/listexample3.png"
+        }
+    ]
 }
