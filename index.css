@@ -1,8 +1,9 @@
 #heading {
-    width: 300px;
+    width: 500px;
     border: 15px darkblue;
     padding: 50px;
     margin: auto;
+    text-align: center;
   }
 
   .main_list{
